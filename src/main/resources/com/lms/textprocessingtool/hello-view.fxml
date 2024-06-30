@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="693.0" prefWidth="938.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lms.textprocessingtool.Controllers.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" promptText="Enter text to manipulate" />
+    <TextField fx:id="regexInput" promptText="Enter regex" />
+
+    <Label fx:id="welcomeText" />
+    <AnchorPane prefHeight="60.0" prefWidth="898.0">
+        <children>
+            <Text fx:id="resultField" layoutX="20.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result: " />
+        </children>
+    </AnchorPane>
+    <AnchorPane prefHeight="99.0" prefWidth="898.0">
+        <children>
+            <Button fx:id="searchButton" layoutY="7.0" mnemonicParsing="false" onAction="#onSearchButtonClick" text="Search" />
+            <Button fx:id="replaceButton" layoutX="-3.0" layoutY="50.0" mnemonicParsing="false" onAction="#onReplaceButtonClick" text="Replace" />
+            <TextField fx:id="replaceText" layoutX="73.0" layoutY="50.0" />
+        </children>
+    </AnchorPane>
+    <AnchorPane prefHeight="178.0" prefWidth="898.0">
+        <children>
+            <ComboBox fx:id="dataStructuresComboBox" layoutX="14.0" layoutY="51.0" onAction="#onDataStructureChange" prefWidth="150.0" promptText="Data Structure" />
+            <Button layoutX="14.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleDataStructureChange" text="Add" />
+            <Button layoutX="136.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleSubmitTextChange" text="Edit" />
+            <Button layoutX="71.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+            <TextField fx:id="collectionInputData" layoutX="368.0" layoutY="51.0" onAction="#handleSubmitTextChange" promptText="What to change" />
+            <Text layoutX="23.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Collections Manipulation" />
+            <ComboBox fx:id="collectionDataComboBox" layoutX="185.0" layoutY="51.0" onAction="#onCollectionValueChange" prefWidth="150.0" promptText="Value" />
+        </children>
+    </AnchorPane>
+</VBox>
